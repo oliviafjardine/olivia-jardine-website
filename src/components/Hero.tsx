@@ -1,5 +1,4 @@
-import React from 'react';
-import { MapPin, Github, Linkedin, Instagram } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 const Hero = () => {
   return (

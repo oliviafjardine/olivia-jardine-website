@@ -1,5 +1,4 @@
-import React from "react";
-import { Mail, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 
 interface ContactSectionProps {
