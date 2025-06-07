@@ -91,16 +91,14 @@
       @apply py-20
     }
     .btn {
-      @apply py-2 px-4 rounded-full inline-flex items-center gap-2 relative overflow-hidden;
-      background-color: hsl(var(--color-box));
-      color: hsl(var(--heading-1));
-      border: 1.2px solid hsl(var(--box-border));
-      box-shadow: 0 1px 2px 0 hsl(var(--box-shadow));
+      @apply relative p-3 backdrop-blur-md bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 transform shadow-lg;
     }
-    .btn:hover,
-    .btn:focus-visible {
-      background-color: hsl(var(--heading-1));
-      color: hsl(var(--color-bg));
+    .btn:hover .btn-glow,
+    .btn:focus-visible .btn-glow {
+      @apply opacity-100;
+    }
+    .btn-glow {
+      @apply absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-lg opacity-0 transition-all duration-300;
     }
 
     .form-input-style {

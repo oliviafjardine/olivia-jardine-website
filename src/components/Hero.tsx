@@ -34,40 +34,18 @@ const Hero = () => {
         </div>
 
         {/* Center - Professional Glass Name */}
-        <div className="flex items-center justify-center h-full">
+        <div className="flex items-center justify-center">
           <div className="relative fade-in-left">
 
-            {/* Professional Glass Panel */}
-            <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/15 via-white/8 to-white/5 border border-white/20 rounded-3xl p-16 md:p-20 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:shadow-[0_35px_60px_-12px_rgba(0,0,0,0.3)] transition-all duration-500">
-
-              {/* Subtle Glass Reflection */}
-              <div className="absolute top-6 left-6 right-6 h-1/3 bg-gradient-to-b from-white/20 via-white/5 to-transparent rounded-t-3xl pointer-events-none"></div>
-
-              {/* Clean Typography */}
-              <div className="relative z-10">
-                <div className='text-xl md:text-2xl lg:text-3xl xl:text-[2rem] 2xl:text-[4rem] leading-[0.85] tracking-tight'>
-                  OLIVIA JARDINE
-                </div>
+            {/* Subtle Depth Shadow */}
+            <div className="absolute inset-0 flex justify-center text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-light leading-[0.85] tracking-tight opacity-50 blur-xs -z-10">
+              <div className="text-slate-800">
+                OLIVIA<br/>JARDINE
               </div>
-
-              {/* Minimal Glass Accents */}
-              <div className="absolute top-8 left-8 w-12 h-12 border-l-2 border-t-2 border-white/30 rounded-tl-2xl"></div>
-              <div className="absolute bottom-8 right-8 w-12 h-12 border-r-2 border-b-2 border-white/30 rounded-br-2xl"></div>
-
-              {/* Subtle Depth Shadow */}
-              <div className="absolute inset-0 text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-light leading-[0.85] tracking-tight opacity-10 blur-sm transform translate-x-2 translate-y-2 -z-10">
-                <div className="text-slate-800">
-                  OLIVIA<br/>JARDINE
-                </div>
-              </div>
-
-              {/* Professional Edge Glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-3xl blur-xl -z-20"></div>
             </div>
 
-            {/* Minimal Glass Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 backdrop-blur-md bg-white/15 border border-white/25 rounded-xl shadow-lg"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 backdrop-blur-md bg-white/15 border border-white/25 rounded-lg shadow-lg"></div>
+            {/* Professional Edge Glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-3xl blur-xl -z-20"></div>
           </div>
         </div>
       </div>

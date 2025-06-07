@@ -34,7 +34,7 @@ const Navbar = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(prev => !prev);
 
   return (
-    <nav className="bg-white py-1 fixed top-0 left-0 w-full z-20 shadow-sm border-b border-gray-200">
+    <nav className="bg-white py-3 fixed top-0 left-0 w-full z-20 shadow-sm border-b border-gray-200">
       <div className="container-margins flex justify-between items-center">
         <Link
           to="/"
