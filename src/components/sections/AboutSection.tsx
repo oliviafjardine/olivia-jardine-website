@@ -1,6 +1,4 @@
-import type { BaseProps } from "../../constants";
-
-const About: React.FC<BaseProps> = ({ isHome = false }) => {
+const About: React.FC = () => {
   return (
     <section className="bg-zinc-50 py-16 md:py-24">
       <div className="container-margins">

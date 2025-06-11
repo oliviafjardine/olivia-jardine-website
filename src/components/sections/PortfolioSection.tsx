@@ -1,10 +1,7 @@
 import { Project } from "../Project";
 import { PROJECTS_DATA } from "../../constants";
-import type { BaseProps } from "../../constants";
 
-export default function PortfolioSection({ isHome = false }: BaseProps) {
-  const displayedProjects = isHome ? PROJECTS_DATA.slice(0, 2) : PROJECTS_DATA;
-
+export default function PortfolioSection() {
   return (
     <section className="bg-primary py-16">
       <div className="container-margins">
@@ -15,21 +12,10 @@ export default function PortfolioSection({ isHome = false }: BaseProps) {
         </div>
 
         <div className="space-y-16 md:space-y-20">
-          {displayedProjects.map((project, index) => (
+          {PROJECTS_DATA.map((project, index) => (
             <Project key={index} {...project} />
           ))}
         </div>
-
-        {isHome && (
-          <div className="mt-16 text-center">
-            <a
-              href="/portfolio"
-              className="inline-block text-accent text-accent-hover text-base md:text-lg transition-colors duration-200"
-            >
-              View All Projects →
-            </a>
-          </div>
-        )}
       </div>
     </section>
   );

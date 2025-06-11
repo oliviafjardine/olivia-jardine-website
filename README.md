@@ -15,7 +15,7 @@ A modern, professional portfolio website featuring advanced glassmorphism design
 - **React 19**: Latest React with modern hooks and components
 - **TypeScript**: Full type safety and better development experience
 - **Tailwind CSS 4**: Latest Tailwind with custom theme and components
-- **React Router**: Client-side routing for smooth navigation
+- **Smooth Scrolling Navigation**: Single-page application with smooth scroll to sections
 - **Lucide React**: Modern icon library for social media and UI icons
 - **Vite**: Fast development server and optimized builds
 
@@ -86,7 +86,7 @@ The built files will be in the `dist` directory.
 src/
 ├── components/
 │   ├── Hero.tsx              # Main hero section with glassmorphism blob
-│   ├── Navbar.tsx            # Navigation with consistent margins
+│   ├── Navbar.tsx            # Navigation with smooth scroll functionality
 │   ├── Layout.tsx            # Main layout wrapper
 │   └── sections/
 │       ├── AboutSection.tsx   # About content
@@ -94,12 +94,8 @@ src/
 │       ├── PortfolioSection.tsx # Project portfolio
 │       └── ContactSection.tsx # Contact form and info
 ├── pages/
-│   ├── Home.tsx              # Homepage with all sections
-│   ├── About.tsx             # Dedicated about page
-│   ├── Skills.tsx            # Dedicated skills page
-│   ├── Portfolio.tsx         # Dedicated portfolio page
-│   ├── Contact.tsx           # Dedicated contact page
-│   └── NotFound.tsx          # 404 error page
+│   ├── Home.tsx              # Single-page application with all sections
+│   └── NotFound.tsx          # 404 error page (for future use)
 ├── assets/                   # Images and static files
 ├── index.css                 # Global styles and Tailwind config
 └── main.tsx                  # Application entry point

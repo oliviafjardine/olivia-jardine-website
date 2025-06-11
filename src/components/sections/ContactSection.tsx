@@ -1,17 +1,14 @@
 import { Mail, MapPin } from 'lucide-react';
-import type { BaseProps } from '../../constants';
 import { Button } from '../ui';
 
-export default function ContactSection({ isHome = false }: BaseProps) {
+export default function ContactSection() {
   return (
     <section className="mt-10 mb-20 min-h-screen">
       {/* Header Section - Full Width */}
       <div className="w-full bg-[url(/src/assets/city.jpg)] bg-cover bg-center h-96 flex flex-col items-center justify-center">
         <div className="container-margins">
           <h1 className="text-center text-white text-3xl md:text-4xl lg:text-5xl">
-            {isHome
-              ? "Send me a message!"
-              : "Send me a message - for inquiries, project collaborations, or socially!"}
+            Send me a message!
           </h1>
         </div>
       </div>

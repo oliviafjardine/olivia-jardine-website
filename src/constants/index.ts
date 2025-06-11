@@ -1,8 +1,3 @@
-// Common type definitions
-export interface BaseProps {
-  isHome?: boolean;
-}
-
 // Common styling constants
 export const COMMON_STYLES = {
   section: "py-16 md:py-20",
@@ -16,13 +11,13 @@ export const COMMON_STYLES = {
   transition: "transition-colors duration-200",
 } as const;
 
-// Navigation links
+// Navigation links - Updated for single-page scroll navigation
 export const NAV_LINKS = [
-  { to: "/", label: "Home", isCTA: false },
-  { to: "/about", label: "About", isCTA: false },
-  { to: "/skills", label: "Skills", isCTA: false },
-  { to: "/portfolio", label: "Portfolio", isCTA: false },
-  { to: "/contact", label: "Contact", isCTA: false },
+  { to: "#hero", label: "Home", isCTA: false },
+  { to: "#portfolio", label: "Portfolio", isCTA: false },
+  { to: "#skills", label: "Skills", isCTA: false },
+  { to: "#about", label: "About", isCTA: false },
+  { to: "#contact", label: "Contact", isCTA: false },
 ];
 
 // Skills data

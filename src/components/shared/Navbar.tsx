@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../../constants';
 
 const Navbar = () => {
@@ -7,19 +6,32 @@ const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
-  useEffect(() => {
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
     setIsMobileMenuOpen(false);
-  }, [location.pathname]);
+    // Re-enable scrolling when menu closes after navigation
+    document.body.style.overflow = 'unset';
+  };
 
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsMenuVisible(true);
       setTimeout(() => setFadeIn(true), 10);
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = 'hidden';
     } else {
       setFadeIn(false);
       const timeout = setTimeout(() => setIsMenuVisible(false), 300);
+      // Re-enable scrolling when menu closes
+      document.body.style.overflow = 'unset';
       return () => clearTimeout(timeout);
     }
   }, [isMobileMenuOpen]);
@@ -28,9 +40,12 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight - 100);
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Cleanup: ensure scrolling is re-enabled when component unmounts
+      document.body.style.overflow = 'unset';
+    };
   }, []);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(prev => !prev);
@@ -46,17 +61,17 @@ const Navbar = () => {
             }`}
           >
             {NAV_LINKS.map(({ to, label, isCTA }) => (
-              <Link
+              <button
                 key={to}
-                to={to}
+                onClick={() => scrollToSection(to)}
                 className={`transition-colors duration-300 ${
                   isCTA
                     ? 'bg-accent-primary bg-accent-hover px-4 py-2 rounded-full'
-                    : `${isScrolled ? 'text-primary hover:text-accent-hover' : 'text-light hover:text-zinc-300'}`
+                    : `${isScrolled ? 'text-primary hover:text-accent-hover' : 'text-white/80 hover:text-white'}`
                 }`}
               >
                 {label}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
@@ -65,8 +80,8 @@ const Navbar = () => {
         <button
           onClick={toggleMobileMenu}
           className={`lg:hidden right-6 absolute z-50 group transition-colors duration-300 ${
-            isMobileMenuOpen || isScrolled ? 'text-primary' : 'text-light'
-          }`}          
+            isScrolled ? 'text-primary' : 'text-light'
+          }`}
           aria-label="Toggle menu"
         >
           <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -80,24 +95,27 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuVisible && (
         <div
-          className={`lg:hidden fixed inset-0 z-40 bg-primary transition-opacity duration-300 ${
+          className={`lg:hidden fixed inset-0 z-40 bg-primary/90 backdrop-blur-xl transition-opacity duration-300 ${
             fadeIn ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >
           <div className="container-margins flex flex-col items-center justify-center h-full space-y-4">
             {NAV_LINKS.map(({ to, label, isCTA }) => (
-              <Link
+              <button
                 key={to}
-                to={to}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`transition-colors duration-200 ${
+                onClick={() => scrollToSection(to)}
+                className={`transition-colors duration-200 text-center ${
                   isCTA
-                    ? 'bg-accent-primary bg-accent-hover text-primary px-6 py-2 rounded-full text-sm sm:text-base'
-                    : 'text-lg sm:text-xl text-accent-hover py-1'
+                    ? 'bg-accent-primary hover:bg-accent-hover text-primary px-6 py-2 rounded-full text-sm sm:text-base cursor-pointer'
+                    : `text-lg sm:text-xl py-1 cursor-pointer ${
+                        isScrolled 
+                          ? 'text-primary hover:text-accent-hover' 
+                          : 'text-light hover:text-accent-hover'
+                      }`
                 }`}
               >
                 {label}
-              </Link>
+              </button>
             ))}
           </div>
         </div>

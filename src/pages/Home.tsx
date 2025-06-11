@@ -7,18 +7,20 @@ import Contact from '../components/sections/ContactSection';
 const Home = () => {
   return (
     <div className="space-y-20">
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
       <section id="portfolio">
-        <Portfolio isHome />
+        <Portfolio />
       </section>
       <section id="skills">
         <Skills />
       </section>
       <section id="about">
-        <About isHome />
+        <About />
       </section>
       <section id="contact">
-        <Contact isHome />
+        <Contact />
       </section>
     </div>
   );

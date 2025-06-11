@@ -1,5 +1,4 @@
 import { SKILLS_DATA } from "../../constants";
-import type { BaseProps } from "../../constants";
 
 type Skill = {
   readonly name: string;
@@ -11,7 +10,7 @@ type SkillCategory = {
   readonly items: readonly Skill[];
 };
 
-export default function SkillsSection({ isHome = false }: BaseProps) {
+export default function SkillsSection() {
   const skillCategories = ["Frontend", "Backend", "DevOps"] as const;
 
   const skillsByCategory: Record<typeof skillCategories[number], SkillCategory | undefined> =
