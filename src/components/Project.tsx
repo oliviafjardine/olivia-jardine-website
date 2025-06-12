@@ -89,7 +89,8 @@ export const Project: React.FC<ProjectProps> = ({
 
       {/* Desktop Layout */}
       <div className="hidden sm:flex items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24 xl:gap-40 py-12">
-        <div className={`w-2/5 ${imageLeft ? 'order-1' : 'order-2'}`}>
+        {/* Image Container */}
+        <div className={`w-2/5 ${imageLeft ? 'order-1 flex justify-end' : 'order-2 flex justify-start'}`}>
           <img
             src={imageSrc}
             alt={title}
@@ -97,6 +98,7 @@ export const Project: React.FC<ProjectProps> = ({
           />
         </div>
 
+        {/* Content Container */}
         <div 
           ref={desktopContentRef}
           className={`w-3/5 space-y-4 ${imageLeft ? 'order-2' : 'order-1'} text-left transition-all duration-100 ease-out will-change-transform`}
