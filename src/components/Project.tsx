@@ -7,6 +7,11 @@ interface ProjectProps {
   subtitle: string;
   description: string;
   imageLeft?: boolean;
+  // New props for custom sizing
+  mobileImageHeight?: string;
+  mobileImageWidth?: string;
+  desktopImageWidth?: string;
+  desktopImageHeight?: string;
 }
 
 export const Project: React.FC<ProjectProps> = ({
@@ -15,6 +20,11 @@ export const Project: React.FC<ProjectProps> = ({
   subtitle,
   description,
   imageLeft = true,
+  // Default values
+  mobileImageHeight = "h-64",
+  mobileImageWidth = "w-full",
+  desktopImageWidth = "w-64 md:w-80 lg:w-120",
+  desktopImageHeight = "h-auto",
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const desktopContentRef = useRef<HTMLDivElement>(null);
@@ -29,41 +39,36 @@ export const Project: React.FC<ProjectProps> = ({
       const sectionHeight = rect.height;
       const windowHeight = window.innerHeight;
       
-      // Calculate how much of the section is visible
       const visibleRatio = Math.max(0, Math.min(1, 
         (windowHeight - sectionTop) / (windowHeight + sectionHeight)
       ));
       
-      // Calculate scroll offset relative to section
       const scrollOffset = (0.5 - visibleRatio) * 100;
       setScrollY(scrollOffset);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial call
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    // Apply dramatic parallax transform only to desktop content
     if (desktopContentRef.current) {
-      // Text moves up when scrolling down (negative multiplier)
       const contentTransform = scrollY * 1.5;
-      
       desktopContentRef.current.style.transform = `translateY(${contentTransform}px)`;
     }
   }, [scrollY]);
 
   return (
     <section ref={sectionRef} className="w-full relative overflow-hidden">
-      {/* Mobile Layout - Stacked (NO PARALLAX) */}
+      {/* Mobile Layout */}
       <div className="flex flex-col gap-4 py-8 sm:hidden">
-        <div className="w-full">
+        <div className="w-full flex justify-center">
           <img
             src={imageSrc}
             alt={title}
-            className="w-full h-64 object-cover"
+            className={`${mobileImageWidth} ${mobileImageHeight} object-cover`}
           />
         </div>
         <div className="w-full space-y-6">
@@ -82,18 +87,16 @@ export const Project: React.FC<ProjectProps> = ({
         </div>
       </div>
 
-      {/* Tablet+ Layout - Side by Side (WITH DRAMATIC PARALLAX) */}
+      {/* Desktop Layout */}
       <div className="hidden sm:flex items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24 xl:gap-40 py-12">
-        {/* Image - NO PARALLAX */}
         <div className={`w-2/5 ${imageLeft ? 'order-1' : 'order-2'}`}>
           <img
             src={imageSrc}
             alt={title}
-            className="w-64 h-auto md:w-80 lg:w-120 object-cover"
+            className={`${desktopImageWidth} ${desktopImageHeight} object-cover`}
           />
         </div>
 
-        {/* Content - WITH DRAMATIC PARALLAX */}
         <div 
           ref={desktopContentRef}
           className={`w-3/5 space-y-4 ${imageLeft ? 'order-2' : 'order-1'} text-left transition-all duration-100 ease-out will-change-transform`}

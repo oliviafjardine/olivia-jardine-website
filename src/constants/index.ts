@@ -50,7 +50,7 @@ export const SKILLS_DATA = [
   },
 ] as const;
 
-// Projects data
+// Projects data with custom image sizes
 export const PROJECTS_DATA = [
   {
     imageSrc: "/src/assets/projects/kcit/iphone-1.png",
@@ -58,6 +58,11 @@ export const PROJECTS_DATA = [
     title: "The Extranet — Hazard Waste Management Program",
     description: "Designing end-to-end features, initiating early product concepts, and driving product growth for an Apple hardware subscription program.",
     imageLeft: true,
+    // Custom sizes for this project
+    mobileImageHeight: "h-auto", // Taller mobile image
+    mobileImageWidth: "w-48", // Centered narrow mobile image (like phone mockup)
+    desktopImageWidth: "w-64 sm:w-72 md:w-80", // Wider desktop image
+    desktopImageHeight: "h-auto",
   },
   {
     imageSrc: "/images/google-project.png",
@@ -65,6 +70,11 @@ export const PROJECTS_DATA = [
     title: "Redesigned onboarding flow for Google Drive",
     description: "Conducted user studies and simplified the onboarding experience for millions of users.",
     imageLeft: false,
+    // Custom sizes for this project
+    mobileImageHeight: "h-48", // Shorter mobile image
+    mobileImageWidth: "w-80", // Wider centered mobile image
+    desktopImageWidth: "w-56 md:w-72 lg:w-96", // Smaller desktop image
+    desktopImageHeight: "h-64", // Fixed height
   },
   {
     imageSrc: "/images/meta-project.png",
@@ -72,5 +82,10 @@ export const PROJECTS_DATA = [
     title: "Optimizing React component libraries for speed and scale",
     description: "Built internal tools and reusable component systems to streamline cross-team collaboration.",
     imageLeft: true,
+    // Custom sizes for this project
+    mobileImageHeight: "h-60", // Medium mobile image height
+    mobileImageWidth: "w-72", // Medium width, centered
+    desktopImageWidth: "w-80 md:w-[28rem] lg:w-[36rem]", // Very wide desktop image
+    desktopImageHeight: "h-auto",
   },
 ];
