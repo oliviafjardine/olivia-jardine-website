@@ -1,6 +1,6 @@
 const About: React.FC = () => {
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-12">
       <div className="container-margins">
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">

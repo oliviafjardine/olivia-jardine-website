@@ -3,20 +3,21 @@ import { Button } from '../ui';
 
 export default function ContactSection() {
   return (
-    <section className="mt-10 mb-20 min-h-screen">
+    <section className="min-h-screen">
       {/* Header Section - Full Width */}
-      <div className="w-full bg-[url(/src/assets/city.jpg)] bg-cover bg-center h-96 flex flex-col items-center justify-center">
+      <div className="w-full h-60 flex flex-col items-center justify-center">
         <div className="container-margins">
-          <h1 className="text-center text-white text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="text-center text-gray-800 text-3xl md:text-4xl lg:text-5xl">
             Contact
           </h1>
         </div>
+        <div className="w-16 h-0.5 bg-zinc-400 mx-auto mt-2"></div>
       </div>
 
       {/* Content Section - With Container Margins */}
       <div className="container-margins flex flex-col items-center">
 
-        <img src="/src/assets/profile-pic.jpg" alt="profile" className="rounded-full object-cover w-48 h-auto border border-white border-4 -mt-24 mb-8"/>
+        <img src="/src/assets/profile-pic.jpg" alt="profile" className="rounded-full object-cover w-48 h-auto border border-white border-4 -mt-12 mb-8"/>
 
         {/* Profile Contact Information */}
         <div className="w-full max-w-2xl bg-white border border-gray-200 shadow-sm rounded-lg p-10 mb-10">
@@ -118,25 +119,6 @@ export default function ContactSection() {
               </Button>
             </div>
           </form>
-        </div>
-
-        {/* Social Icons */}
-        <div className="flex justify-center gap-4 mt-16">
-          {[
-            { href: 'https://github.com/oliviafjardine', icon: '/src/assets/icons/github.png', label: 'GitHub' },
-            { href: 'https://linkedin.com/in/olivia-jardine', icon: '/src/assets/icons/linkedin.png', label: 'LinkedIn' },
-          ].map(({ href, icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-all duration-200 hover:scale-110"
-              aria-label={label}
-            >
-              <img src={icon} alt={label} className="w-8 h-8" />
-            </a>
-          ))}
         </div>
       </div>
     </section>
