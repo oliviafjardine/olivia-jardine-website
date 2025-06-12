@@ -51,13 +51,13 @@ const Navbar = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(prev => !prev);
 
   return (
-    <nav className={`fixed top-0 w-full z-20 py-6 transition-colors duration-300 ${isScrolled ? 'bg-primary' : 'bg-light'}`}>
+    <nav className={`fixed top-0 w-full z-20 py-6 transition-colors duration-300 ${isScrolled ? '' : 'bg-light'}`}>
       <div className="container-margins flex justify-center items-center relative">
         {/* Desktop Links - Centered */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden md:flex items-center">
           <div
-            className={`flex space-x-6 text-xs sm:text-sm transition-all duration-300 px-4 py-2 ${
-              !isScrolled ? 'bg-white/10 backdrop-blur-md rounded-full' : ''
+            className={`flex space-x-6 text-xs sm:text-sm transition-all duration-300 px-4 py-2 rounded-full ${
+              !isScrolled ? 'bg-white/10 backdrop-blur-md' : 'bg-black/10 backdrop-blur-lg'
             }`}
           >
             {NAV_LINKS.map(({ to, label, isCTA }) => (
@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Mobile Menu Button - Positioned Right */}
         <button
           onClick={toggleMobileMenu}
-          className={`lg:hidden right-6 absolute z-50 group transition-colors duration-300 ${
+          className={`md:hidden right-6 absolute z-50 group transition-colors duration-300 ${
             isScrolled ? 'text-primary' : 'text-light'
           }`}
           aria-label="Toggle menu"
@@ -95,7 +95,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuVisible && (
         <div
-          className={`lg:hidden fixed inset-0 z-40 bg-primary/90 backdrop-blur-xl transition-opacity duration-300 ${
+          className={`md:hidden fixed inset-0 z-40 bg-primary/90 backdrop-blur-xl transition-opacity duration-300 ${
             fadeIn ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >
