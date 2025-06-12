@@ -1,72 +1,144 @@
-const About: React.FC = () => {
-  return (
-    <section className="py-16 md:py-28 bg-neutral-50 text-zinc-700">
-      <div className="container-margins">
+import { Mail, MapPin } from 'lucide-react';
+import { Button } from '../ui';
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-5xl font-light text-zinc-900 mb-4 tracking-tight">
-            Background
+export default function ContactSection() {
+  return (
+    <section className="mt-10 mb-20 min-h-screen">
+      {/* Header Section - Full Width */}
+      <div className="w-full bg-[url(/src/assets/city.jpg)] bg-cover bg-center h-96 flex flex-col items-center justify-center">
+        <div className="container-margins">
+          <h1 className="text-center text-white text-3xl md:text-4xl lg:text-5xl">
+            Contact
           </h1>
-          <div className="w-16 h-0.5 bg-zinc-400 mx-auto rounded-full" />
+        </div>
+      </div>
+
+      {/* Content Section - With Container Margins */}
+      <div className="container-margins flex flex-col items-center">
+
+        <img src="/src/assets/profile-pic.jpg" alt="profile" className="rounded-full object-cover w-48 h-auto border border-white border-4 -mt-24 mb-8"/>
+
+        {/* Profile Contact Information */}
+        <div className="w-full max-w-2xl bg-white border border-gray-200 shadow-sm rounded-lg p-10 mb-10">
+          <div className="space-y-4">
+            <div className="flex items-center gap-4">
+              <MapPin className="w-5 h-5 text-gray-600" aria-hidden="true" />
+              <span className="text-gray-800 text-base">Seattle, WA</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <Mail className="w-5 h-5 text-gray-600" aria-hidden="true" />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=oliviajardine9@gmail.com"
+                target="_blank"
+                className="text-blue-600 hover:underline text-base"
+              >
+                oliviajardine9@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-
-          {/* Education Tile */}
-          <div className="bg-white/70 border border-zinc-200 rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-3 h-3 bg-blue-500 rounded-full" />
-              <h2 className="text-xl font-light text-zinc-800">Education</h2>
+        {/* Contact Form Section */}
+        <div className="relative w-full max-w-2xl bg-white border border-gray-200 shadow-sm rounded-lg p-10">
+          <form className="space-y-4">
+            {/* Name Fields */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="first_name" className="block text-sm mb-1">
+                  First Name
+                </label>
+                <input
+                  id="first_name"
+                  type="text"
+                  placeholder="Your first name"
+                  className="form-input-style"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="last_name" className="block text-sm mb-1">
+                  Last Name
+                </label>
+                <input
+                  id="last_name"
+                  type="text"
+                  placeholder="Your last name"
+                  className="form-input-style"
+                  required
+                />
+              </div>
             </div>
 
+            {/* Email Field */}
             <div>
-              <p className="text-zinc-800 text-base">University of Washington</p>
-              <p className="text-sm text-zinc-500">Seattle, WA</p>
-              <p className="text-sm text-zinc-600 mt-2">
-                B.S. Discrete Mathematics & Algorithms
-              </p>
-              <p className="text-sm text-zinc-500">Minor in Business</p>
+              <label htmlFor="email" className="block text-sm mb-1">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                className="form-input-style"
+                required
+              />
             </div>
 
-            <div className="flex items-center gap-2 mt-4 text-sm">
-              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-              <span className="text-blue-600">Sophomore • Class of 2027</span>
-            </div>
-          </div>
-
-          {/* Philosophy Tile */}
-          <div className="bg-white/70 border border-zinc-200 rounded-2xl p-6 md:p-8 space-y-5 shadow-sm">
-            <h2 className="text-xl font-light text-zinc-800 mb-2">Philosophy</h2>
-
-            <div className="space-y-4 text-[15px] leading-relaxed">
-              <p>
-                Leading development of a public-sector tool for King County’s
-                Hazardous Waste Management Program, I’ve found that strong engineering
-                comes from cross-disciplinary collaboration and shared purpose.
-              </p>
-
-              <p>
-                Working with government IT teams has highlighted the power of inclusive,
-                respectful environments that elevate both code and community impact.
-              </p>
-
-              <p>
-                I approach every challenge with a mindset of curiosity, humility, and
-                the belief that good systems empower people.
-              </p>
+            {/* Subject Field */}
+            <div>
+              <label htmlFor="subject" className="block text-sm mb-1">
+                Subject
+              </label>
+              <input
+                id="subject"
+                type="text"
+                placeholder="Subject of your message"
+                className="form-input-style"
+                required
+              />
             </div>
 
-            <div className="mt-6 bg-zinc-100/70 p-4 rounded-lg border border-zinc-200 text-sm italic text-center text-zinc-600">
-              "The best engineers are those who elevate others while staying curious,
-              authentic, and open to new perspectives."
+            {/* Message Field */}
+            <div>
+              <label htmlFor="message" className="block text-sm mb-1">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={5}
+                placeholder="Write your message here..."
+                className="form-input-style"
+                required
+              />
             </div>
-          </div>
+
+            {/* Submit Button */}
+            <div className="flex justify-center">
+              <Button type="submit" variant="black" size="md">
+                SUBMIT
+              </Button>
+            </div>
+          </form>
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4 mt-16">
+          {[
+            { href: 'https://github.com/oliviafjardine', icon: '/src/assets/icons/github.png', label: 'GitHub' },
+            { href: 'https://linkedin.com/in/olivia-jardine', icon: '/src/assets/icons/linkedin.png', label: 'LinkedIn' },
+          ].map(({ href, icon, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-200 hover:scale-110"
+              aria-label={label}
+            >
+              <img src={icon} alt={label} className="w-8 h-8" />
+            </a>
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default About;
+}
