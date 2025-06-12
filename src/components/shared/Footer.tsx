@@ -75,11 +75,18 @@ const Footer = () => {
           SOFTWARE ENGINEER • SEATTLE, WA
         </p>
 
-        {/* Social Icons */}
+        {/* Resume + Social Icons */}
         <div className="flex items-center gap-4">
+
+          {/* Social Icons */}
           {[
             {
-              href: 'https://github.com/oliviafjardine?tab=overview&from=2025-06-01&to=2025-06-12',
+              href: 'https://mail.google.com/mail/?view=cm&fs=1&to=oliviajardine9@gmail.com',
+              icon: EmailIcon,
+              label: 'Email',
+            },
+            {
+              href: 'https://github.com/oliviafjardine',
               icon: GithubFilled,
               label: 'GitHub',
             },
@@ -87,11 +94,6 @@ const Footer = () => {
               href: 'https://linkedin.com/in/olivia-jardine',
               icon: LinkedinFilled,
               label: 'LinkedIn',
-            },
-            {
-              href: 'https://mail.google.com/mail/?view=cm&fs=1&to=oliviajardine9@gmail.com',
-              icon: EmailIcon,
-              label: 'Email',
             },
           ].map(({ href, icon: Icon, label }) => (
             <a
@@ -106,6 +108,17 @@ const Footer = () => {
               <Icon className="w-6 h-6 text-white/80 relative z-10" />
             </a>
           ))}
+
+          {/* Resume Button */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative transition-all duration-200 hover:scale-105 bg-white/10 backdrop-blur-md rounded-full px-6 h-12 flex items-center justify-center text-sm font-medium text-white/80 shadow-md overflow-hidden"
+          >
+            <span className="absolute h-[150px] w-[50px] bg-white opacity-20 left-[-75px] top-[-40px] rotate-[37deg] transition-all duration-250 group-hover:left-[95%]" />
+            <span className="relative z-10">Resume</span>
+          </a>
         </div>
 
         {/* Copyright */}
