@@ -20,6 +20,36 @@ export const NAV_LINKS = [
   { to: "#contact", label: "Contact", isCTA: false },
 ];
 
+// Skills dataMore actions
+export const SKILLS_DATA = [
+  {
+    category: "Frontend",
+    items: [
+      { name: "TypeScript", icon: "/src/assets/tech/typescript.png" },
+      { name: "React", icon: "/src/assets/tech/react.png" },
+      { name: "Tailwind CSS", icon: "/src/assets/tech/tailwind.png" },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Python", icon: "/src/assets/tech/python.png" },
+      { name: "C#", icon: "/src/assets/tech/c-sharp.png" },
+      { name: "Java", icon: "/src/assets/tech/java.png" },
+      { name: "Node.js", icon: "/src/assets/tech/node-js.png" },
+    ],
+  },
+  {
+    category: "DevOps",
+    items: [
+      { name: "Azure", icon: "/src/assets/tech/azure.png" },
+      { name: "SQL Server", icon: "/src/assets/tech/sql-server.png" },
+      { name: "Git", icon: "/src/assets/tech/git.svg" },
+      { name: "Docker", icon: "/src/assets/tech/docker.png" },
+    ],
+  },
+] as const;
+
 // Projects data with custom image sizes
 export const PROJECTS_DATA = [
   {
@@ -35,9 +65,9 @@ export const PROJECTS_DATA = [
   },
   {
     imageSrc: "/images/google-project.png",
-    subtitle: "PROJECT NODE FLOW",
+    subtitle: "EDUCATIONAL TOOL DEVELOPMENT",
     title: "Node Flow — Interactive Data Structures & Algorithms Visualizer",
-    description: "Conducted user studies and simplified the onboarding experience for millions of users.",
+    description: "Built an interactive data structures and algorithms visualization tool, helping CS students understand foundational computer science concepts through engaging visual learning experiences.",
     imageLeft: false,
     mobileImageHeight: "h-auto",
     mobileImageWidth: "w-80",
@@ -46,9 +76,9 @@ export const PROJECTS_DATA = [
   },
   {
     imageSrc: "/images/meta-project.png",
-    subtitle: "META UI ENGINEER",
-    title: "Optimizing React component libraries for speed and scale",
-    description: "Built internal tools and reusable component systems to streamline cross-team collaboration.",
+    subtitle: "IN PROGRESS PROJECT",
+    title: "Shoplifter Detection System",
+    description: "Developing a computer vision system that processes retail video streams in real-time to detect suspicious behavior using YOLO object detection and alerts store associates.",
     imageLeft: true,
     mobileImageHeight: "h-auto",
     mobileImageWidth: "w-72",
