@@ -54,10 +54,10 @@ const Hero = () => {
       {/* Foreground Content */}
       <div className="relative z-10 space-y-4">
         <p className="text-muted text-md sm:text-base md:text-lg tracking-wider">
-          SOFTWARE DEVELOPER
+          SOFTWARE ENGINEER
         </p>
-        <h1 className="text-zinc-300 font-[430] text-5xl sm:text-6xl tracking-normal max-w-4xl">
-          <span className="text-light">Olivia Jardine</span> is a software developer and business owner based in Seattle, WA.
+        <h1 className="text-zinc-300 text-5xl sm:text-6xl tracking-normal max-w-4xl">
+          <span className="text-light">Olivia Jardine</span> is a software engineer and business owner based in Seattle, WA.
         </h1>
       </div>
 

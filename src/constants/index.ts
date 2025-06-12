@@ -53,7 +53,7 @@ export const SKILLS_DATA = [
 // Projects data
 export const PROJECTS_DATA = [
   {
-    imageSrc: "/images/apple-project.png",
+    imageSrc: "/src/assets/projects/kcit/iphone-1.png",
     subtitle: "KING COUNTY",
     title: "The Extranet — Hazard Waste Management Program",
     description: "Designing end-to-end features, initiating early product concepts, and driving product growth for an Apple hardware subscription program.",
