@@ -65,12 +65,14 @@ const Hero = () => {
       <div className="absolute bottom-6 right-6 flex items-center gap-3 z-10">
         {/* Resume Button */}
         <a
-          href="/resume.pdf"
+          href="/src/assets/resume/resume.pdf#zoom=page-fit"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative transition-all duration-200 hover:scale-105 bg-white/10 backdrop-blur-md rounded-full px-4 h-10 flex items-center justify-center text-sm font-medium text-white/80 shadow-md overflow-hidden"
+          aria-label="View resume as PDF in new tab"
+          className="group relative transition-all duration-300 hover:scale-105 bg-white/10 backdrop-blur-md rounded-full px-5 h-10 flex items-center justify-center text-sm font-medium text-white/80 shadow-lg overflow-hidden"
         >
-          <span className="absolute h-[150px] w-[50px] bg-white opacity-20 left-[-75px] top-[-40px] rotate-[37deg] transition-all duration-250 group-hover:left-[95%]" />
+          {/* Shine effect */}
+          <span className="absolute h-[150px] w-[50px] bg-white opacity-20 left-[-75px] top-[-40px] rotate-[37deg] transition-all duration-300 group-hover:left-[95%]" />
           <span className="relative z-10">Resume</span>
         </a>
 
