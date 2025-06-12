@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import darkBlueVideo from '../../assets/media/dark-blue.mp4';
 
 const Footer = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,7 +57,7 @@ const Footer = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/src/assets/media/dark-blue.mp4" type="video/mp4" />
+        <source src={darkBlueVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

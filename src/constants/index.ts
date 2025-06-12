@@ -1,3 +1,17 @@
+// Asset imports
+import typescriptIcon from '../assets/tech/typescript.png';
+import reactIcon from '../assets/tech/react.png';
+import tailwindIcon from '../assets/tech/tailwind.png';
+import pythonIcon from '../assets/tech/python.png';
+import csharpIcon from '../assets/tech/c-sharp.png';
+import javaIcon from '../assets/tech/java.png';
+import nodejsIcon from '../assets/tech/node-js.png';
+import sqlServerIcon from '../assets/tech/sql-server.png';
+import azureIcon from '../assets/tech/azure.png';
+import dockerIcon from '../assets/tech/docker.png';
+import gitIcon from '../assets/tech/git.svg';
+import kcitImage from '../assets/projects/kcit/iphone-1.png';
+
 // Common styling constants
 export const COMMON_STYLES = {
   section: "py-16 md:py-20",
@@ -20,32 +34,32 @@ export const NAV_LINKS = [
   { to: "#contact", label: "Contact", isCTA: false },
 ];
 
-// Skills dataMore actions
+// Skills data
 export const SKILLS_DATA = [
   {
     category: "Frontend",
     items: [
-      { name: "TypeScript", icon: "/src/assets/tech/typescript.png" },
-      { name: "React", icon: "/src/assets/tech/react.png" },
-      { name: "Tailwind CSS", icon: "/src/assets/tech/tailwind.png" },
+      { name: "TypeScript", icon: typescriptIcon },
+      { name: "React", icon: reactIcon },
+      { name: "Tailwind CSS", icon: tailwindIcon },
     ],
   },
   {
     category: "Backend",
     items: [
-      { name: "Python", icon: "/src/assets/tech/python.png" },
-      { name: "C#", icon: "/src/assets/tech/c-sharp.png" },
-      { name: "Java", icon: "/src/assets/tech/java.png" },
-      { name: "Node.js", icon: "/src/assets/tech/node-js.png" },
+      { name: "Python", icon: pythonIcon },
+      { name: "C#", icon: csharpIcon },
+      { name: "Java", icon: javaIcon },
+      { name: "Node.js", icon: nodejsIcon },
     ],
   },
   {
     category: "DevOps",
     items: [
-      { name: "Azure", icon: "/src/assets/tech/azure.png" },
-      { name: "SQL Server", icon: "/src/assets/tech/sql-server.png" },
-      { name: "Git", icon: "/src/assets/tech/git.svg" },
-      { name: "Docker", icon: "/src/assets/tech/docker.png" },
+      { name: "Azure", icon: azureIcon },
+      { name: "SQL Server", icon: sqlServerIcon },
+      { name: "Git", icon: gitIcon },
+      { name: "Docker", icon: dockerIcon },
     ],
   },
 ] as const;
@@ -53,7 +67,7 @@ export const SKILLS_DATA = [
 // Projects data with custom image sizes
 export const PROJECTS_DATA = [
   {
-    imageSrc: "/src/assets/projects/kcit/iphone-1.png",
+    imageSrc: kcitImage,
     subtitle: "KING COUNTY (COLLABORATION)",
     title: "The Extranet — Hazard Waste Management Program",
     description: "Modernizing a legacy hazardous waste management system using C# ASP.NET Core and SQL Server, enabling organizations to streamline regulatory compliance through efficient site visit tracking, document storage, and automated reporting dashboards.",

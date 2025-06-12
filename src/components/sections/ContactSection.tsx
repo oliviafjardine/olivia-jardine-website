@@ -1,5 +1,6 @@
 import { Mail, MapPin } from 'lucide-react';
 import { Button } from '../ui';
+import profilePic from '../../assets/profile-pic.jpg';
 
 export default function ContactSection() {
   return (
@@ -17,7 +18,7 @@ export default function ContactSection() {
       {/* Content Section - With Container Margins */}
       <div className="container-margins flex flex-col items-center">
 
-        <img src="/src/assets/profile-pic.jpg" alt="profile" className="rounded-full object-cover w-48 h-auto border border-white border-4 -mt-12 mb-8"/>
+        <img src={profilePic} alt="profile" className="rounded-full object-cover w-48 h-auto border border-white border-4 -mt-12 mb-8"/>
 
         {/* Profile Contact Information */}
         <div className="w-full max-w-2xl bg-white border border-gray-200 shadow-sm rounded-lg p-10 mb-10">

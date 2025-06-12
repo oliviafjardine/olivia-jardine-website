@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import darkBlueVideo from '../assets/media/dark-blue.mp4';
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -44,7 +45,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/src/assets/media/dark-blue.mp4" type="video/mp4" />
+        <source src={darkBlueVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -65,7 +66,7 @@ const Hero = () => {
       <div className="absolute bottom-6 right-6 flex items-center gap-3 z-10">
         {/* Resume Button */}
         <a
-          href="/src/assets/resume/resume.pdf#zoom=page-fit"
+          href="/resume.pdf#zoom=page-fit"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="View resume as PDF in new tab"
