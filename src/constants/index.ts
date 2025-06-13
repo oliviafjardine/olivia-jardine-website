@@ -11,6 +11,7 @@ import azureIcon from '../assets/tech/azure.png';
 import dockerIcon from '../assets/tech/docker.png';
 import gitIcon from '../assets/tech/git.svg';
 import kcitImage from '../assets/projects/kcit/iphone-1.png';
+import nodeFlowImage from '../assets/projects/node flow/node-flow-1.png';
 
 // Common styling constants
 export const COMMON_STYLES = {
@@ -78,15 +79,16 @@ export const PROJECTS_DATA = [
     desktopImageHeight: "h-auto",
   },
   {
-    imageSrc: "/images/google-project.png",
+    imageSrc: nodeFlowImage,
     subtitle: "EDUCATIONAL TOOL DEVELOPMENT",
     title: "Node Flow — Interactive Data Structures & Algorithms Visualizer",
     description: "Built an interactive data structures and algorithms visualization tool, helping CS students understand foundational computer science concepts through engaging visual learning experiences.",
     imageLeft: false,
     mobileImageHeight: "h-auto",
-    mobileImageWidth: "w-80",
-    desktopImageWidth: "w-56 md:w-72 lg:w-96",
+    mobileImageWidth: "w-7/8",
+    desktopImageWidth: "w-[30rem] md:w-[36rem] lg:w-[56rem]",
     desktopImageHeight: "h-auto",
+    allowImageOverflow: true,
   },
   {
     imageSrc: "/images/meta-project.png",
