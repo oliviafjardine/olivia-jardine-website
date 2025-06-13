@@ -22,7 +22,7 @@ export default function SkillsSection() {
   return (
     <section
       aria-labelledby="technologies-heading"
-      className="bg-secondary py-20 md:py-36"
+      className="bg-secondary py-20 md:py-32"
     >
       <div className="container-margins">
         {/* Header */}

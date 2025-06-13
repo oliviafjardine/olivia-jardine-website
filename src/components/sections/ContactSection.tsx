@@ -4,7 +4,7 @@ import profilePic from '../../assets/profile-pic.jpg';
 
 export default function ContactSection() {
   return (
-    <section className="min-h-screen">
+    <section className="py-20 md:py-32">
       {/* Header Section - Full Width */}
       <div className="w-full h-60 flex flex-col items-center justify-center">
         <div className="container-margins">

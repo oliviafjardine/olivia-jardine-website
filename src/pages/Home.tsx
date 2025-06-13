@@ -6,7 +6,7 @@ import Contact from '../components/sections/ContactSection';
 
 const Home = () => {
   return (
-    <div className="space-y-20">
+    <div className="space-y-0">
       <section id="hero">
         <Hero />
       </section>
