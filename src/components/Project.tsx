@@ -35,12 +35,6 @@ export const Project: React.FC<ProjectProps> = ({
 	desktopImageHeight = "h-auto",
 	allowImageOverflow = false,
 	index,
-	heroImage,
-	backgroundColor,
-	role,
-	duration,
-	tools,
-	logo,
 }) => {
 	const navigate = useNavigate();
 	const sectionRef = useRef<HTMLElement>(null);
