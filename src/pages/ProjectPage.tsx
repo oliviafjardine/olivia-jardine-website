@@ -60,6 +60,9 @@ const ProjectPage = () => {
 									<img
 										src={nodeFlowAboutImage}
 										alt="Node Flow Overview"
+										loading="eager"
+										fetchPriority="high"
+										decoding="async"
 										className="w-full rounded-lg shadow-lg mt-6"
 									/>
 								)}
@@ -67,6 +70,9 @@ const ProjectPage = () => {
 									<img
 										src={shoplifterDashboardImage}
 										alt="Shoplifter Detection Dashboard"
+										loading="eager"
+										fetchPriority="high"
+										decoding="async"
 										className="w-full rounded-lg shadow-lg mt-6"
 									/>
 								)}
@@ -109,6 +115,9 @@ const ProjectPage = () => {
 									<img
 										src={shoplifterApiImage}
 										alt="Shoplifter Detection API"
+										loading="eager"
+										fetchPriority="high"
+										decoding="async"
 										className="w-full rounded-lg shadow-lg mt-6"
 									/>
 								)}
@@ -133,11 +142,17 @@ const ProjectPage = () => {
 										<img
 											src={nodeFlowVisualizationImage}
 											alt="Queue Implementation"
+											loading="eager"
+											fetchPriority="high"
+											decoding="async"
 											className="w-full rounded-lg shadow-lg"
 										/>
 										<img
 											src={nodeFlowImplementationImage}
 											alt="Implementation Details"
+											loading="eager"
+											fetchPriority="high"
+											decoding="async"
 											className="w-full rounded-lg shadow-lg"
 										/>
 									</div>
