@@ -3,11 +3,11 @@ import { PROJECTS_DATA } from "../constants";
 import { Button } from "../components/ui";
 import PageHero from "../components/shared/PageHero";
 import { useEffect } from "react";
-import nodeFlowAboutImage from "../assets/projects/node flow/about.png";
-import nodeFlowVisualizationImage from "../assets/projects/node flow/visualization.png";
-import nodeFlowImplementationImage from "../assets/projects/node flow/implementation.png";
-import shoplifterDashboardImage from "../assets/projects/shoplifter/dashboard.png";
-import shoplifterApiImage from "../assets/projects/shoplifter/api.png";
+import nodeFlowAboutImage from "../assets/projects/node flow/about.webp";
+import nodeFlowVisualizationImage from "../assets/projects/node flow/visualization.webp";
+import nodeFlowImplementationImage from "../assets/projects/node flow/implementation.webp";
+import shoplifterDashboardImage from "../assets/projects/shoplifter/dashboard.webp";
+import shoplifterApiImage from "../assets/projects/shoplifter/api.webp";
 
 const ProjectPage = () => {
 	const { projectId } = useParams();

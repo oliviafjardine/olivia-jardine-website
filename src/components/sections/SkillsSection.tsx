@@ -74,13 +74,21 @@ function SkillCategory({ title, skills }: SkillCategoryProps) {
 						<span className="absolute h-[150px] w-[50px] bg-white opacity-40 left-[-75px] top-[-40px] rotate-[37deg] transition-all duration-300 group-hover:left-[95%]" />
 
 						<div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-zinc-100 rounded-lg flex items-center justify-center">
-							<img
-								src={skill.icon}
-								alt={`${skill.name} icon`}
-								className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
-								loading="lazy"
-								draggable={false}
-							/>
+							<picture>
+								<source
+									srcSet={skill.icon.replace(".png", ".webp")}
+									type="image/webp"
+								/>
+								<img
+									src={skill.icon}
+									alt={`${skill.name} icon`}
+									className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+									loading="lazy"
+									draggable={false}
+									width={20}
+									height={20}
+								/>
+							</picture>
 						</div>
 						<span className="text-xs sm:text-sm md:text-base font-light text-zinc-700 relative z-10">
 							{skill.name}

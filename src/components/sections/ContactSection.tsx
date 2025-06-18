@@ -1,6 +1,6 @@
 import { Mail, MapPin } from "lucide-react";
 import { Button } from "../ui";
-import profilePic from "../../assets/profile-pic.jpg";
+import profilePicWebp from "../../assets/profile-pic.webp";
 
 export default function ContactSection() {
 	return (
@@ -17,11 +17,17 @@ export default function ContactSection() {
 
 			{/* Content Section */}
 			<div className="container-margins flex flex-col items-center">
-				<img
-					src={profilePic}
-					alt="profile"
-					className="rounded-full object-cover w-48 h-auto border-2 border-zinc-200 -mt-12 mb-8"
-				/>
+				<picture>
+					<source srcSet={profilePicWebp} type="image/webp" />
+					<img
+						src={profilePicWebp}
+						alt="profile"
+						className="rounded-full object-cover w-48 h-48 border-2 border-zinc-200 -mt-12 mb-8"
+						width={192}
+						height={192}
+						loading="lazy"
+					/>
+				</picture>
 
 				{/* Profile Contact Information */}
 				<div className="w-full max-w-2xl bg-white/60 border border-zinc-200 shadow-sm rounded-lg p-10 mb-10">

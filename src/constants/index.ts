@@ -1,22 +1,22 @@
 // Asset imports
-import typescriptIcon from "../assets/tech/typescript.png";
-import reactIcon from "../assets/tech/react.png";
-import tailwindIcon from "../assets/tech/tailwind.png";
-import pythonIcon from "../assets/tech/python.png";
-import csharpIcon from "../assets/tech/c-sharp.png";
-import javaIcon from "../assets/tech/java.png";
-import nodejsIcon from "../assets/tech/node-js.png";
-import sqlServerIcon from "../assets/tech/sql-server.png";
-import azureIcon from "../assets/tech/azure.png";
-import dockerIcon from "../assets/tech/docker.png";
+import typescriptIcon from "../assets/tech/typescript.webp";
+import reactIcon from "../assets/tech/react.webp";
+import tailwindIcon from "../assets/tech/tailwind.webp";
+import pythonIcon from "../assets/tech/python.webp";
+import csharpIcon from "../assets/tech/c-sharp.webp";
+import javaIcon from "../assets/tech/java.webp";
+import nodejsIcon from "../assets/tech/node-js.webp";
+import sqlServerIcon from "../assets/tech/sql-server.webp";
+import azureIcon from "../assets/tech/azure.webp";
+import dockerIcon from "../assets/tech/docker.webp";
 import gitIcon from "../assets/tech/git.svg";
-import kcitImage from "../assets/projects/kcit/iphone-1.png";
-import kcitLogo from "../assets/projects/kcit/logo.png";
-import kcitHeroImage from "../assets/projects/kcit/hero.jpg";
-import nodeFlowImage from "../assets/projects/node flow/node-flow-1.png";
-import nodeFlowHeroImage from "../assets/projects/node flow/hero.png";
-import shoplifterImage from "../assets/projects/shoplifter/front.png";
-import shoplifterHeroImage from "../assets/projects/shoplifter/hero.jpg";
+import kcitImage from "../assets/projects/kcit/iphone-1.webp";
+import kcitLogo from "../assets/projects/kcit/logo.webp";
+import kcitHeroImage from "../assets/projects/kcit/hero.webp";
+import nodeFlowImage from "../assets/projects/node flow/node-flow-1.webp";
+import nodeFlowHeroImage from "../assets/projects/node flow/hero.webp";
+import shoplifterImage from "../assets/projects/shoplifter/front.webp";
+import shoplifterHeroImage from "../assets/projects/shoplifter/hero.webp";
 
 // Common styling constants
 export const COMMON_STYLES = {
