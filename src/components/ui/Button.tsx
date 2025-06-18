@@ -35,7 +35,6 @@ const Button: React.FC<ButtonProps> = ({
 
 	return (
 		<button className={combinedClassName} {...props}>
-			{/* Shine effect */}
 			<span className="relative z-10">{children}</span>
 		</button>
 	);
