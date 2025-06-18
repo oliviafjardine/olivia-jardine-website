@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import darkBlueVideo from "../../assets/media/dark-blue.mp4";
+import darkBlueVideo from "../../assets/media/dark-blue-compressed.mp4";
 
 const Footer = () => {
 	const videoRef = useRef<HTMLVideoElement>(null);
