@@ -1,8 +1,27 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import darkBlueVideo from "../assets/media/dark-blue-compressed.mp4";
 
 const Hero = () => {
 	const videoRef = useRef<HTMLVideoElement>(null);
+	const [isVideoVisible, setIsVideoVisible] = useState(false);
+
+	useEffect(() => {
+		const observer = new window.IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setIsVideoVisible(true);
+						observer.disconnect();
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+		if (videoRef.current) {
+			observer.observe(videoRef.current);
+		}
+		return () => observer.disconnect();
+	}, []);
 
 	useEffect(() => {
 		if (videoRef.current) {
@@ -39,14 +58,16 @@ const Hero = () => {
 			{/* Background looping video */}
 			<video
 				ref={videoRef}
-				autoPlay
+				autoPlay={isVideoVisible}
 				loop
 				muted
 				playsInline
-				preload="auto"
+				preload={isVideoVisible ? "auto" : "none"}
 				className="absolute inset-0 w-full h-full object-cover z-0"
+				style={{ opacity: isVideoVisible ? 1 : 0, transition: "opacity 0.5s" }}
+				{...("loading" in HTMLVideoElement.prototype ? { loading: "lazy" } : {})}
 			>
-				<source src={darkBlueVideo} type="video/mp4" />
+				{isVideoVisible && <source src={darkBlueVideo} type="video/mp4" />}
 				Your browser does not support the video tag.
 			</video>
 
