@@ -36,7 +36,6 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button className={combinedClassName} {...props}>
 			{/* Shine effect */}
-			<span className="absolute h-[150px] w-[50px] bg-white opacity-20 left-[-75px] top-[-40px] rotate-[37deg] transition-all duration-300 group-hover:left-[95%]" />
 			<span className="relative z-10">{children}</span>
 		</button>
 	);
