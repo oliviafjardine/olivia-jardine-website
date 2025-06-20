@@ -12,7 +12,7 @@
 @layer base {
 	:root {
 		--text-primary: 225 0% 15%;
-		--text-secondary: 225 0% 25%;
+		--text-secondary: 225 0% 15%;
 		--text-muted: 225 0% 60%;
 		--text-light: 0 0% 100%;
 		--bg-primary: 0 0% 100%;

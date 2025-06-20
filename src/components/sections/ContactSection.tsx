@@ -11,7 +11,6 @@ export default function ContactSection() {
 					<h1 className="text-3xl md:text-5xl font-light text-zinc-900 mb-4">
 						Contact
 					</h1>
-					<div className="w-16 h-0.5 bg-zinc-400 mx-auto"></div>
 				</div>
 			</div>
 
@@ -30,7 +29,7 @@ export default function ContactSection() {
 				</picture>
 
 				{/* Profile Contact Information */}
-				<div className="w-full max-w-2xl bg-white/60 border border-zinc-200 shadow-sm rounded-lg p-10 mb-10">
+				<div className="w-full max-w-xl bg-white/60 border border-zinc-200 shadow-sm rounded-lg p-10 mb-10">
 					<div className="space-y-4">
 						<div className="flex items-center gap-4">
 							<MapPin className="w-5 h-5 text-zinc-600" aria-hidden="true" />
@@ -52,7 +51,7 @@ export default function ContactSection() {
 				</div>
 
 				{/* Contact Form Section */}
-				<div className="relative w-full max-w-2xl bg-white/60 border border-zinc-200 shadow-sm rounded-lg p-10">
+				<div className="relative w-full max-w-xl bg-white/60 border border-zinc-200 shadow-sm rounded-lg p-10">
 					<form className="space-y-4">
 						{/* Name Fields */}
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

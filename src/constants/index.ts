@@ -1,4 +1,4 @@
-// Asset imports
+// Technologies
 import typescriptIcon from "../assets/tech/typescript.webp";
 import reactIcon from "../assets/tech/react.webp";
 import tailwindIcon from "../assets/tech/tailwind.webp";
@@ -10,6 +10,9 @@ import sqlServerIcon from "../assets/tech/sql-server.webp";
 import azureIcon from "../assets/tech/azure.webp";
 import dockerIcon from "../assets/tech/docker.webp";
 import gitIcon from "../assets/tech/git.svg";
+import firebase from "../assets/tech/firebase.webp";
+
+// Project images
 import kcitImage from "../assets/projects/kcit/iphone-1.webp";
 import kcitLogo from "../assets/projects/kcit/logo.webp";
 import kcitHeroImage from "../assets/projects/kcit/hero.webp";
@@ -57,10 +60,11 @@ export const SKILLS_DATA = [
 			{ name: "C#", icon: csharpIcon },
 			{ name: "Java", icon: javaIcon },
 			{ name: "Node.js", icon: nodejsIcon },
+			{ name: "Firebase", icon: firebase },
 		],
 	},
 	{
-		category: "DevOps",
+		category: "DevOps & Tools",
 		items: [
 			{ name: "Azure", icon: azureIcon },
 			{ name: "SQL Server", icon: sqlServerIcon },
@@ -75,7 +79,7 @@ export const PROJECTS_DATA = [
 	{
 		imageSrc: kcitImage,
 		heroImage: kcitHeroImage,
-		subtitle: "KING COUNTY (COLLABORATION)",
+		subtitle: "KING COUNTY (PRIVATE CONTRACT)",
 		title: "The Extranet — Hazard Waste Management Program",
 		logo: kcitLogo,
 		description:
@@ -90,13 +94,14 @@ export const PROJECTS_DATA = [
 		tools: ["C#", "ASP.NET Core", "SQL Server", "Azure DevOps"],
 		details: {
 			overview:
-				"The Extranet is a comprehensive web application developed for King County's Hazardous Waste Management Program. It modernizes legacy systems and provides a unified platform for managing hazardous waste compliance, site visits, and documentation.",
+				"The Extranet is a web application developed for King County's Hazardous Waste Management Program. It modernizes legacy systems and provides a unified platform for managing hazardous waste compliance, site visits, and documentation.",
 			challenge:
 				"The existing system was outdated, difficult to maintain, and lacked modern features needed for efficient regulatory compliance management. Organizations struggled with manual processes for tracking site visits and maintaining documentation.",
 			solution:
 				"Developed a modern web application using C# ASP.NET Core and SQL Server that streamlines the entire hazardous waste management process. The system includes features for automated site visit scheduling, digital document management, and real-time compliance reporting.",
 			technologies: [
-				"C# ASP.NET Core",
+				"ASP.NET Core MVC",
+				"C#",
 				"SQL Server",
 				"Entity Framework Core",
 				"Azure DevOps",

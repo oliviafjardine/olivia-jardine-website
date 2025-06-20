@@ -7,7 +7,6 @@ const About: React.FC = () => {
           <h1 className="text-3xl md:text-5xl font-light text-zinc-900 mb-4">
             Background
           </h1>
-          <div className="w-16 h-0.5 bg-zinc-400 mx-auto"></div>
         </div>
 
         {/* Content Grid */}
