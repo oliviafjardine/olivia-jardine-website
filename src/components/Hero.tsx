@@ -58,9 +58,9 @@ const Hero = () => {
 				<p className="text-muted text-md sm:text-base md:text-lg tracking-wider">
 					SOFTWARE ENGINEER
 				</p>
-				<h1 className="text-zinc-300 text-5xl sm:text-6xl tracking-normal max-w-4xl">
+				<h1 className="text-zinc-300 text-5xl sm:text-6xl md:text-7xl tracking-normal max-w-4xl">
 					<span className="text-light">Olivia Jardine</span> is a software
-					engineer in Seattle, WA, currently contracted with King County.
+					engineer in Seattle, WA.
 				</h1>
 			</div>
 
